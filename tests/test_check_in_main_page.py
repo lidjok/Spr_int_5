@@ -26,11 +26,9 @@ class Test_Check_in:
             random_pass)
         driver.find_element(*TestLocator.BUTTON_REGISTRATION_SUBMIT).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa' and contains(text(), 'Войти')]")))
-        time.sleep(6)
 
         driver.find_element(*TestLocator.BUTTON_LOGO_RETURN_MAIN).click()
         driver.find_element(*TestLocator.BUTTON_MAIN_ENTER_ACC).click() # клик по Войти в аккаунт на главной странице
-
         driver.find_element(*TestLocator.INPUT_AVTORIZATION_EMAIL).send_keys(random_email)  # заполняем форму авторизации
         driver.find_element(*TestLocator.INPUT_AVTORIZATION_PASS).send_keys(random_pass)
         driver.find_element(*TestLocator.BUTTON_AVTORIZATION_CHECK_IN).click()
